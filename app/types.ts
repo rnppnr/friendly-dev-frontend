@@ -1,0 +1,80 @@
+export type Project = {
+  id: string;
+  documentId: string;
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  date: string;
+  category: string;
+  featured: boolean;
+};
+
+export type Post = {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  body: string;
+  image: string;
+  date: string;
+};
+
+export type BlogPostDetailsPageProps = {
+  loaderData: {
+    post: Post;
+  };
+};
+
+export type PostFilterProps = {
+  searchQuery: string;
+  onSearchChange: (value: string) => void;
+};
+
+export type LatestPostsProps = {
+  posts: Post[];
+  limit?: number;
+};
+
+export type StrapiResponse<T> = {
+  data: T[];
+};
+
+export type StrapiProject = {
+  id: string;
+  documentId: string;
+  title: string;
+  description: string;
+  image?: {
+    url: string;
+    formats?: {
+      thumbnail?: { url: string };
+      small?: { url: string };
+      medium?: { url: string };
+      large?: { url: string };
+    };
+  };
+  url: string;
+  date: string;
+  category: string;
+  featured: boolean;
+};
+
+export type StrapiPost = {
+  id: string;
+  documentId: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  body: string;
+  date: string;
+  image?: {
+    url: string;
+    formats?: {
+      thumbnail?: { url: string };
+      small?: { url: string };
+      medium?: { url: string };
+      large?: { url: string };
+    };
+  };
+};
