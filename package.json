@@ -10,7 +10,7 @@
     "json-server": "json-server data/db.json --port 8000"
   },
   "dependencies": {
-    "@react-router/node": "^7.7.1",
+    "@react-router/node": "^7.9.4",
     "@react-router/serve": "^7.7.1",
     "framer-motion": "^12.23.12",
     "isbot": "^5.1.27",
